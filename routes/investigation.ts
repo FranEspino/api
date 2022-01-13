@@ -29,7 +29,7 @@ router.post(
     ],
     postInvestigation
     );
-router.put("/archivo64",putArchivo64);
+router.put("/updatedocumento",putArchivo64);
 router.put("/archivo/:id_investigacion", fileUpload,putArchivo);
 router.get("/", getInvestigations);
 router.put("/", fileUpload, putInvestigations);

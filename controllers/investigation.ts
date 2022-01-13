@@ -109,7 +109,7 @@ export const putArchivo = async (req: Request, res: Response) => {
 };
 
 export const putArchivo64 = async (req: Request, res: Response) => {
-  const { documents,id_investigacion } = req.body;
+  const { id_investigacion,documents } = req.body;
   //console.log("documents:", documents);
   try {
     const investigation = await pool.query(
@@ -173,6 +173,7 @@ export const putArchivo64 = async (req: Request, res: Response) => {
     res.status(500).json({ msg: "Error al guardar el archivo" });
   }
 };
+
 export const getInvestigations = async (req: Request, res: Response) => {
   const { id_investigador, id_asesor, id_admin } = req.query;
   //console.log(req.body);
